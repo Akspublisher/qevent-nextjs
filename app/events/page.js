@@ -1,25 +1,9 @@
-
-// import EventCard from "@/components/EventCard";
-
-
-//     const response = await fetch("https://qevent-backend.labs.crio.do/events");
-//     const data = await response.json();
-
-//  async function eventPage() {
-//     return <div>
-//         {data.map((event) => (
-//         <EventCard eventData={event} />
-//         ))}
-//         </div>;
-
-// }
-// export default eventPage; 
-
 "use client";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import EventCard from "@/components/EventCard";
 
+export const dynamic = "force-dynamic";
 export default function EventPage() {
   const searchParams = useSearchParams();
   const artistName = searchParams.get("artist");
@@ -39,15 +23,6 @@ export default function EventPage() {
         //       (event) =>
         //         event.artist &&
         //         event.artist.toLowerCase() === artistName.toLowerCase()
-        //     )
-        //   : data;
-
-        //   // Filter by tag name if present in query params
-        // const filteredTag = tagName
-        //   ? data.filter(
-        //       (event) =>
-        //         event.artist &&
-        //         event.artist.toLowerCase() === tagName.toLowerCase()
         //     )
         //   : data;
 
